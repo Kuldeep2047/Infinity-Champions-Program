@@ -1,0 +1,26 @@
+package Week_2.Sheet_1;
+
+import java.util.Scanner;
+import java.util.Stack;
+
+public class Reverse_Using_Stack {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String s = sc.next();
+        System.out.println(reverse(s));
+    }
+    public static String reverse(String s) {
+        
+        int n = s.length();
+        Stack<Character> st = new Stack<>();
+        for(int i=0 ;i<n ;i++){
+            st.push(s.charAt(i));
+        }
+        StringBuilder sb = new StringBuilder();
+        while(!st.isEmpty()){
+            sb.append(st.pop());
+        }
+        
+        return sb.toString();
+    }
+}
